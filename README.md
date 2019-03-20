@@ -3,14 +3,33 @@
 ### **Intro To Creative Computing** 2019 Spring
 
 ##### 3.7 (목)
-- rect(x1, y1, w, h)
-- ellipse(x1, y1, w, h)
-- line(x1, y1, x2, y2)
-- strokeWeight(n): 선의 굵기 지정
-- stroke(r, g, b): 선의 색상 지정
+- [🔗](https://processing.org/reference/rect_.html)rect(x1, y1, w, h)
+- [🔗](https://processing.org/reference/ellipse_.html)ellipse(x1, y1, w, h)
+- [🔗](https://processing.org/reference/line_.html)line(x1, y1, x2, y2)
+- [🔗](https://processing.org/reference/strokeWeight_.html)strokeWeight(n): 선의 굵기 지정
+- [🔗](https://processing.org/reference/stroke_.html)stroke(r, g, b): 선의 색상 지정
 
 ##### 3.12 (화)
-- beginShape(), endShape()
-- cos(angle)
-- sin(angle)
-- vertex(x, y, z, u, v)
+- [🔗](https://processing.org/reference/beginShape_.html)beginShape()
+- [🔗](https://processing.org/reference/endShape_.html)endShape()
+- [🔗](https://processing.org/reference/vertex_.html)vertex(x, y, z, u, v)
+- [🔗](https://processing.org/reference/cos_.html)cos(angle)
+- [🔗](https://processing.org/reference/sin_.html)sin(angle)
+
+##### 3.14 (목)
+- [🔗](https://processing.org/reference/constrain_.html)constraint(amt, low, high) 
+
+##### 3.19 (화)
+Programming Structure - **Conditional statement IF**
+```
+    If (   A ||  C  ) {
+        xxxxxxxx
+    } else if (  condition B == true / false    ) {
+        xxxxxxxx
+    } else {
+        // if none of above matched to your condition
+        xxxxxxxx
+    }
+
+```
+물체의 왕복 운동을 표현할 수 있다.
