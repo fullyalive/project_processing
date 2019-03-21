@@ -33,3 +33,12 @@ Programming Structure - **Conditional statement IF**
 
 ```
 물체의 왕복 운동을 표현할 수 있다.
+
+##### 3.21 (목)
+
+**[project 1]()**
+- [🔗](https://processing.org/reference/pushMatrix_.html)	
+pushMatrix(), popMatrix() : 스택을 쌓아서 제어 범위한정
+- 한 방향에서 무한히 생성되는 일방향 오브젝트 생성 
+- 제자리에서 무한히 회전하는 오브젝트 생성
+
