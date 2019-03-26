@@ -1,35 +1,27 @@
 # **Project_processing**
 
 ### **Intro To Creative Computing** 2019 Spring
+
 - 프로세싱 2D 프로젝트와 수업내용을 정리한다.
 - 프로젝트는 최대한 다른 method를 이용해 제작한다.
 
-
 ## **PROJECT**
 
-#### [project 1](https://github.com/fullyalive/project_processing/commit/f6b35d5a122509e5113f738a2b6cc883cbcff22a)
+### [project 1](https://github.com/fullyalive/project_processing/commit/f6b35d5a122509e5113f738a2b6cc883cbcff22a)
 
-주제 - **Diversity**
+|    주제     | **Diversity**                                                                                                                                                                                                                    |
+| :---------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|    의미     | 새롭게 배운 것을 융합하여 성과로 나타나는 것을 표현하였다.                                                                                                                                                                       |
+| 사용 메소드 | <li> [pushMatrix(), popMatrix()](https://processing.org/reference/pushMatrix_.html) - 스택을 쌓아서 제어 범위한정</li><li>한 방향에서 무한히 생성되는 일방향 오브젝트 생성</li><li>제자리에서 무한히 회전하는 오브젝트 생성</li> |
 
-새롭게 배운 것을 융합하여 성과로 나타나는 것을 표현하였다.
+### [project 2](https://github.com/fullyalive/project_processing/commit/a27ee831e478ab5ea199c408435a4cdfdf0cc57b)
 
-- [pushMatrix(), popMatrix()](https://processing.org/reference/pushMatrix_.html) - 스택을 쌓아서 제어 범위한정
-- 한 방향에서 무한히 생성되는 일방향 오브젝트 생성
-- 제자리에서 무한히 회전하는 오브젝트 생성
-
-#### [project 2]()
-
-주제 - **Free**
-
-자유를 얻기 위해서는 끊임없는 현실의 제약을 극복하며 나아가야 한다는 것을 표현하였다.
-
-- [map(value, start1, stop1, start2, stop2)](https://processing.org/reference/map_.html) - 한 범위에서 다른 범위로 숫자를 다시 매핑
-- [noise(x, y, z)](https://processing.org/reference/noise_.html) - 노이즈 값 생성
-- 한 방향에서 무한히 생성되는 일방향 오브젝트 생성
-- 노이즈의 y좌표에 맞춰 움직이는 오브젝트 생성
+|    주제     | **Free**                                                                                                                                                                                                                                                                                                                                         |
+| :---------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|    의미     | 자유를 얻기 위해서는 끊임없는 현실의 제약을 극복하며 나아가야 한다는 것을 표현하였다.                                                                                                                                                                                                                                                            |
+| 사용 메소드 | <li>[map(value, start1, stop1, start2, stop2)](https://processing.org/reference/map_.html) - 한 범위에서 다른 범위로 숫자를 다시 매핑</li><li>[noise(x, y, z)](https://processing.org/reference/noise_.html) - 노이즈 값 생성</li><li>한 방향에서 무한히 생성되는 일방향 오브젝트 생성</li><li>노이즈의 y좌표에 맞춰 움직이는 오브젝트 생성</li> |
 
 ## **Lecture**
-
 
 ##### 3.7 (목)
 
@@ -65,4 +57,45 @@ Programming Structure - **Conditional statement IF**
         xxxxxxxx
     }
 ```
+
 물체의 왕복 운동을 표현할 수 있다.
+
+##### 3.26(화)
+
+특정 단계의 행동을 수행하는 사이클을 반복해서 실행하기
+
+```
+int stage = 0;
+int counter = 0;
+color c = color(210, 210, 210)
+
+void draw() {
+
+bacground(c);
+if (stage == 0) {
+    c = color(255, 0, 0);
+    counter ++;
+    if (counter > 60) {
+      stage = 1;
+      counter = 0;
+    }
+  } else if (stage == 1) {
+    c = color(0, 255, 0);
+    counter ++;
+    if (counter > 60) {
+      stage = 2;
+      counter = 0;
+    }
+  } else if (stage == 2) {
+    c = color(0, 0, 255);
+    counter ++;
+    if (counter > 60) {
+      stage = 0;
+      counter = 0;
+    }
+  }
+}
+
+// stage 0, 1, 2에 따라 각각 다른 배경색이 칠해진다.
+```
+- [abs(n)](https://processing.org/reference/abs_.html) - 절댓값 반환 메소드

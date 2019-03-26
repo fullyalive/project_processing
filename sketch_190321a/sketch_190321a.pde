@@ -28,7 +28,7 @@ void draw() {
   strokeWeight(1.5);
  
   waterHeight1 += waterDirection;
-  waterHeight2 += .8*waterDirection;
+  waterHeight2 += sin(.0045*waterHeight1-4.2)*waterDirection;
   
   fill(#8693F5);
   rect(0, height, 2*width, waterHeight2-height+390);
@@ -114,6 +114,6 @@ class Dew {
 
   void show() {
     stroke(#3C53BC);
-    line(x, y+len, x, y);
+    line(x, y, x, y+len);
   }
 }

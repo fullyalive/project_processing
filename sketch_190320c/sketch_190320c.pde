@@ -82,7 +82,7 @@ class Wind {
     if (x < 0) {
       x = width;
       y = random(300);
-      xSpeed = random(-10, -40);
+      xSpeed = random(-10, -50);
     }
   }
   
