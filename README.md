@@ -7,14 +7,14 @@
 
 ## **PROJECT**
 
-### [project 1](https://github.com/fullyalive/project_processing/commit/f6b35d5a122509e5113f738a2b6cc883cbcff22a)
+### [project 1](https://github.com/fullyalive/project_processing/blob/f6b35d5a122509e5113f738a2b6cc883cbcff22a/sketch_190321a/sketch_190321a.pde)
 
 |    주제     | **Diversity**                                                                                                                                                                                                                    |
 | :---------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |    의미     | 새롭게 배운 것을 융합하여 성과로 나타나는 것을 표현하였다.                                                                                                                                                                       |
 | 사용 메소드 | <li> [pushMatrix(), popMatrix()](https://processing.org/reference/pushMatrix_.html) - 스택을 쌓아서 제어 범위한정</li><li>한 방향에서 무한히 생성되는 일방향 오브젝트 생성</li><li>제자리에서 무한히 회전하는 오브젝트 생성</li> |
 
-### [project 2](https://github.com/fullyalive/project_processing/commit/a27ee831e478ab5ea199c408435a4cdfdf0cc57b)
+### [project 2](https://github.com/fullyalive/project_processing/blob/a27ee831e478ab5ea199c408435a4cdfdf0cc57b/sketch_190320c/sketch_190320c.pde)
 
 |    주제     | **Free**                                                                                                                                                                                                                                                                                                                                         |
 | :---------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -23,7 +23,7 @@
 
 ## **Lecture**
 
-##### 3.7 (목)
+##### 3.07 (목)
 
 - [rect(x1, y1, w, h)](https://processing.org/reference/rect_.html)
 - [ellipse(x1, y1, w, h)](https://processing.org/reference/ellipse_.html)
@@ -60,7 +60,7 @@ Programming Structure - **Conditional statement IF**
 
 물체의 왕복 운동을 표현할 수 있다.
 
-##### 3.26(화)
+##### 3.26 (화)
 
 특정 단계의 행동을 수행하는 사이클을 반복해서 실행하기
 
@@ -98,4 +98,19 @@ if (stage == 0) {
 
 // stage 0, 1, 2에 따라 각각 다른 배경색이 칠해진다.
 ```
+
 - [abs(n)](https://processing.org/reference/abs_.html) - 절댓값 반환 메소드
+
+##### 4.09 (화)
+
+**Double Iteration**
+```
+for (int i = 30; i < 80; i = i+5) {
+  for (int j = 0; j < 80; j = j+5) {
+    point(i, j);
+
+  }
+}
+```
+
+- [lerpColor(c1, c2, amt)](https://processing.org/reference/lerpColor_.html) - Calculates a color between two colors at a specific increment
