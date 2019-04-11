@@ -114,3 +114,7 @@ for (int i = 30; i < 80; i = i+5) {
 ```
 
 - [lerpColor(c1, c2, amt)](https://processing.org/reference/lerpColor_.html) - Calculates a color between two colors at a specific increment
+
+##### 4.11 (목)
+
+- [image(img, a, b, c, d)](https://processing.org/reference/image_.html)
