@@ -118,3 +118,8 @@ for (int i = 30; i < 80; i = i+5) {
 ##### 4.11 (목)
 
 - [image(img, a, b, c, d)](https://processing.org/reference/image_.html)
+
+##### 4.16 (화)
+
+- [brightness(rgb)](https://processing.org/reference/brightness_.html)
+- [pixels[]](https://processing.org/reference/pixels.html)
