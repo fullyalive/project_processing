@@ -21,6 +21,13 @@
 |    의미     | 자유를 얻기 위해서는 끊임없는 현실의 제약을 극복하며 나아가야 한다는 것을 표현하였다.                                                                                                                                                                                                                                                            |
 | 사용 메소드 | <li>[map(value, start1, stop1, start2, stop2)](https://processing.org/reference/map_.html) - 한 범위에서 다른 범위로 숫자를 다시 매핑</li><li>[noise(x, y, z)](https://processing.org/reference/noise_.html) - 노이즈 값 생성</li><li>한 방향에서 무한히 생성되는 일방향 오브젝트 생성</li><li>노이즈의 y좌표에 맞춰 움직이는 오브젝트 생성</li> |
 
+### [project 3]()
+
+| 주제 | **Quote Description**<br>A long life may not be good enough, but a good life is long enough.<br> by Benjamin Franklin |
+| :-------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 의미 | 긴 인생은 충분히 좋지 않을 수도 있다, 하지만 좋은 인생은 충분히 길다.|
+| 사용 메소드 | <li>[fft](https://processing.org/reference/libraries/sound/FFT.html) - </li><li>[randomSeed()](https://processing.org/reference/randomSeed_.html) - </li>
+
 ## **Lecture**
 
 ##### 3.07 (목)
@@ -104,6 +111,7 @@ if (stage == 0) {
 ##### 4.09 (화)
 
 **Double Iteration**
+
 ```
 for (int i = 30; i < 80; i = i+5) {
   for (int j = 0; j < 80; j = j+5) {
