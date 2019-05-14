@@ -13,18 +13,6 @@ class Star {
     pz = z;
   }  
   
-  void blacked() {
-    if (mousePressed) {
-      colorValue -= 120;
-    }
-  }
-
-  void colored() {
-    if (mousePressed) {
-      colorValue += 120;
-    }
-  }
-  
   void update() {
     z = z - speed;
     if (z < 1) {

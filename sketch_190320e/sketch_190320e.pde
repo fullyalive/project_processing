@@ -18,9 +18,11 @@ void draw() {
     
     // create mouse following eclipse
     
-    fill(255, 150);
-
+    pushMatrix();
+    fill(255, 100, 100);
     float d1 = (cos(angle1) * diameter/2) + diameter/2;
+    popMatrix();
+    fill(255, 50, 100);
     float d2 = (cos(angle2 + PI/2) * diameter/2) + diameter/2;
  
     int inverseX = width-mouseX;

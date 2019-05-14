@@ -22,7 +22,7 @@ class River {
         int ind = int(map(hs, -45, 45, 0, fft.specSize()));
         float amp = fft.getBand(ind);       
         float rs = radius * map(amp, 0, 10, 0.87, 1);
-        starPoint[num][0] = rs*sin(radians(ws))*cos(hs);
+        starPoint[num][0] = rs*cos(radians(ws))*cos(hs);
         starPoint[num][1] = rs*cos(ws)*hs;
         starPoint[num][2] = rs*tan(ws);
         num += 1;

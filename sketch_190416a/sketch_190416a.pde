@@ -46,10 +46,10 @@ void draw() {
   rotateZ(radians(deg));
 
   if (!clicked) {
-  for (int i = 0; i < stars.length; i++) {
-    stars[i].update();
-    stars[i].show();
-  }
+    for (int i = 0; i < stars.length; i++) {
+      stars[i].update();
+      stars[i].show();
+    }
   }
   if (speed < 5) {
     addValue = 0.03;
