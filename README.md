@@ -23,10 +23,17 @@
 
 ### [project 3]()
 
-| 주제 | **Quote Description**<br>A long life may not be good enough, but a good life is long enough.<br> by Benjamin Franklin |
-| :-------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 의미 | 긴 인생은 충분히 좋지 않을 수도 있다, 하지만 좋은 인생은 충분히 길다.|
-| 사용 메소드 | <li>[fft](https://processing.org/reference/libraries/sound/FFT.html) - </li><li>[randomSeed()](https://processing.org/reference/randomSeed_.html) - </li>
+| 주제        | **Quote Description**<br>A long life may not be good enough, but a good life is long enough.<br> by Benjamin Franklin                                     |
+| :---------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 의미        | 긴 인생은 충분히 좋지 않을 수도 있다, 하지만 좋은 인생은 충분히 길다.                                                                                     |
+| 사용 메소드 | <li>[fft](https://processing.org/reference/libraries/sound/FFT.html)</li><li>[randomSeed()](https://processing.org/reference/randomSeed_.html)</li> |
+
+### [project 4]()
+
+| 주제        | **Time**                                                                                                                                                                                        |
+| :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 의미        | 시간의 연속성과 인생에서 여러 방향으로 시간을 찾는 모습을 표현                                                                                                                                  |
+| 사용 메소드 | <li>[sq()](https://processing.org/reference/sq_.html)</li><li>[sqrt()](https://processing.org/reference/sqrt_.html)</li><li>[dist()](https://processing.org/reference/dist_.html)</li> |
 
 ## **Lecture**
 
