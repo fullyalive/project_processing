@@ -7,45 +7,40 @@ float rot;
 float upper_xrot = 0;
 float upper_yrot = 0;
 float upper_zrot = 0;
-float x, z, vx, vz = 0, y = 430;
-PShape megaphone;
-PImage[] w1 = new PImage[250];
-PImage[] w2 = new PImage[250];
-PImage[] w3 = new PImage[250];
-PImage[] w4 = new PImage[250];
-PImage[] w5 = new PImage[250];
 
-int random = floor(random(0, 6));
+movie [] movies;
+PImage[] m1 = new PImage[250];
+PImage[] m2 = new PImage[250];
+PImage[] m3 = new PImage[250];
+PImage[] m4 = new PImage[250];
+PImage[] m5 = new PImage[250];
+PImage[][] m_lists = { m1, m2, m3, m4, m5 };
 
 void setup() {
   fullScreen(P3D);
   smooth();
+  movies = new movie[100];
 
+  for (int i=0; i<movies.length; i++) {
+    movies[i] = new movie(m_lists[i % m_lists.length]);
+  }
+  
   bgm = new SoundFile(this, "bgm.mp3");
   bgm.loop();
 
   ux = new Slider("body x", 10, 10, -90, 0, color(102, 153, 204), color(153, 204, 255), 0);
   uy = new Slider("body y", 10, 30, -90, 90, color(102, 153, 204), color(153, 204, 255), 0);
   uz = new Slider("body z", 10, 50, -90, 0, color(102, 153, 204), color(153, 204, 255), 0);
-  for (int i = 0; i < 250; i++) {
-    if (i<10) {
-      w1[i] = loadImage("./w1/frame_00"+i+"_delay-0.04s.gif");
-      w2[i] = loadImage("./w2/frame_00"+i+"_delay-0.04s.gif");
-      w3[i] = loadImage("./w3/frame_00"+i+"_delay-0.04s.gif");
-      w4[i] = loadImage("./w4/frame_00"+i+"_delay-0.04s.gif");
-      w5[i] = loadImage("./w5/frame_00"+i+"_delay-0.04s.gif");
-    } else if (i< 100) {
-      w1[i] = loadImage("./w1/frame_0"+i+"_delay-0.04s.gif");
-      w2[i] = loadImage("./w2/frame_0"+i+"_delay-0.04s.gif");
-      w3[i] = loadImage("./w3/frame_0"+i+"_delay-0.04s.gif");
-      w4[i] = loadImage("./w4/frame_0"+i+"_delay-0.04s.gif");
-      w5[i] = loadImage("./w5/frame_0"+i+"_delay-0.04s.gif");
-    } else {
-      w1[i] = loadImage("./w1/frame_"+i+"_delay-0.04s.gif");
-      w2[i] = loadImage("./w2/frame_"+i+"_delay-0.04s.gif");
-      w3[i] = loadImage("./w3/frame_"+i+"_delay-0.04s.gif");
-      w4[i] = loadImage("./w4/frame_"+i+"_delay-0.04s.gif");
-      w5[i] = loadImage("./w5/frame_"+i+"_delay-0.04s.gif");
+  
+  for (int i = 1; i <= m_lists.length; i++) {
+    for (int j = 0; j < 10; j++) {
+      m_lists[i-1][j] = loadImage("./m"+i+"/frame_00"+j+"_delay-0.04s.gif");
+    }
+    for (int j =10; j < 100; j++) {
+      m_lists[i-1][j] = loadImage("./m"+i+"/frame_0"+j+"_delay-0.04s.gif");
+    }
+    for (int j =100; j < 250; j++) {
+      m_lists[i-1][j] = loadImage("./m"+i+"/frame_"+j+"_delay-0.04s.gif");
     }
   }
   frameRate(25);
@@ -100,7 +95,7 @@ void draw() {
     for (int j=0; j<10; j++) {
       rotateY(radians(-72));
       translate(0, 0, 70);
-      image(w1[frameCount%250], -88, -12, 0.6*bx, 0.6*by); 
+      image(movies[j].m[frameCount%250], -88, -12, 0.6*bx, 0.6*by); 
       translate(0, 0, -70);
       rotateY(radians(72));
       box(0.8*bx, 0.8*by, 0.8*bz);
@@ -116,7 +111,7 @@ void draw() {
     for (int j=0; j<12; j++) {
       rotateY(radians(-60));
       translate(0, 0, 77);
-      image(w2[frameCount%250], -116.5, -16, 0.8*bx, 0.8*by);
+      image(movies[j].m[frameCount%250], -116.5, -16, 0.8*bx, 0.8*by);
       translate(0, 0, -77);
       rotateY(radians(60));
       box(bx, by, bz);
@@ -126,13 +121,12 @@ void draw() {
     translate(0, by+gap, 0);
   }
   translate(0, 0.1*by, 0.7*bz);
-
   // 3
   for (int i=0; i<4; i++) {
     for (int j=0; j<15; j++) {
       rotateY(radians(-48));
       translate(0, 0, 66);
-      image(w3[frameCount%250], -122, -16, 0.8*bx, 0.8*by);
+      image(movies[j].m[frameCount%250], -122, -16, 0.8*bx, 0.8*by);
       translate(0, 0, -66);
       rotateY(radians(48));
       box(bx, by, bz);
@@ -148,7 +142,7 @@ void draw() {
     for (int j=0; j<18; j++) {
       rotateY(radians(-40));
       translate(0, 0, 59);
-      image(w4[frameCount%250], -125, -16, 0.8*bx, 0.8*by);
+      image(movies[j].m[frameCount%250], -125, -16, 0.8*bx, 0.8*by);
       translate(0, 0, -59);
       rotateY(radians(40));
       box(bx, by, bz);
@@ -164,7 +158,7 @@ void draw() {
     for (int j=0; j<24; j++) {
       rotateY(radians(-30));
       translate(0, 0, 51);
-      image(w5[frameCount%250], -128, -16, 0.8*bx, 0.8*by);
+      image(movies[j].m[frameCount%250], -128, -16, 0.8*bx, 0.8*by);
       translate(0, 0, -51);
       rotateY(radians(30));
       box(bx, by, bz);
