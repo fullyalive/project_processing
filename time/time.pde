@@ -1,7 +1,7 @@
 int numberFrames = 120;
 int margin=15;
 int border=300;
-int max_distance=100;
+int max_distance=200;
 float ts;
 
 void setup() {
